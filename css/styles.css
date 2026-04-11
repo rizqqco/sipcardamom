@@ -630,6 +630,12 @@ section h2 {
 
 .testimonial-author { font-size: 0.82rem; font-weight: 600; color: var(--primary-color); }
 
+.google-reviews-link {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.92rem;
+}
+
 /* ===================== CALL TO ACTION ===================== */
 .cta-section {
   background-color: var(--primary-color);

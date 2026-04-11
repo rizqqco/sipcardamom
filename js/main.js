@@ -11,6 +11,7 @@
     about:   path.includes('about'),
     menu:    path.includes('menu'),
     events:  path.includes('events'),
+    reviews: path.includes('reviews'),
     contact: path.includes('contact'),
   };
 
@@ -29,6 +30,7 @@
         ${navItem('pages/about.html',    'About',   'about')}
         ${navItem('pages/menu.html',     'Menu',    'menu')}
         ${navItem('pages/events.html',   'Events',  'events')}
+        ${navItem('pages/reviews.html',  'Reviews', 'reviews')}
         ${navItem('pages/contact.html',  'Contact', 'contact')}
         <li><a class="cta" href="${base}pages/contact.html">Book Now</a></li>
       </ul>
@@ -44,6 +46,7 @@
           <a href="${base}pages/about.html">About</a>
           <a href="${base}pages/menu.html">Menu</a>
           <a href="${base}pages/events.html">Events</a>
+          <a href="${base}pages/reviews.html">Reviews</a>
           <a href="${base}pages/contact.html">Contact</a>
         </nav>
         <div class="footer-social">

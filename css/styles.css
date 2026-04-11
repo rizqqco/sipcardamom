@@ -998,6 +998,33 @@ section h2 {
   margin: 0 0 0.75rem;
 }
 
+.social-icons-row { display: flex; gap: 0.75rem; align-items: center; }
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: var(--white);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon-btn:hover { transform: scale(1.12); opacity: 0.88; }
+
+.social-icon-btn.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon-btn.tiktok {
+  background: #010101;
+  position: relative;
+}
+
+/* keep old .social-btn for any existing usages */
 .social-btn {
   display: inline-flex;
   align-items: center;
@@ -1293,16 +1320,9 @@ section h2 {
 
 .footer-nav a:hover { color: var(--white); }
 
-.footer-social { margin: 0.25rem 0; display: flex; gap: 1rem; }
+.footer-social { margin: 0.25rem 0; display: flex; gap: 0.75rem; }
 
-.footer-social a {
-  color: rgba(255,255,255,0.7);
-  font-size: 1.35rem;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-
-.footer-social a:hover { color: var(--white); }
+.footer-social a:hover { opacity: 0.88; }
 
 .footer-copy { margin: 0.5rem 0 0; font-size: 0.76rem; color: rgba(255,255,255,0.35); }
 

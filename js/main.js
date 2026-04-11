@@ -50,8 +50,11 @@
           <a href="${base}pages/contact.html">Contact</a>
         </nav>
         <div class="footer-social">
-          <a href="https://instagram.com/sipcardamom" target="_blank" rel="noopener noreferrer" aria-label="Follow Cardamom on Instagram">
+          <a href="https://www.instagram.com/sipcardamom" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" aria-label="Follow Cardamom on Instagram">
             <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@sipcardamom" target="_blank" rel="noopener noreferrer" class="social-icon-btn tiktok" aria-label="Follow Cardamom on TikTok">
+            <i class="fa-brands fa-tiktok"></i>
           </a>
         </div>
         <p class="footer-copy">&copy; 2026 Cardamom. All rights reserved.</p>

@@ -92,15 +92,8 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="guests">Expected Guests *</label>
-                <select id="guests" name="guests" required>
-                  <option value="">Select range</option>
-                  <option value="under-25">Under 25 guests</option>
-                  <option value="25-50">25–50 guests</option>
-                  <option value="50-100">50–100 guests</option>
-                  <option value="100-200">100–200 guests</option>
-                  <option value="200+">200+ guests</option>
-                </select>
+                <label for="event-time">Event Time</label>
+                <input type="time" id="event-time" name="event_time">
               </div>
               <div class="form-group">
                 <label for="event-type">Event Type</label>
@@ -113,6 +106,76 @@
                   <option value="popup">Pop-Up / Activation</option>
                   <option value="other">Other</option>
                 </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Expected Guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Select range</option>
+                  <option value="under-25">Under 25 guests</option>
+                  <option value="25-50">25–50 guests</option>
+                  <option value="50-100">50–100 guests</option>
+                  <option value="100-200">100–200 guests</option>
+                  <option value="200+">200+ guests</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="guests-exact">Exact Guest Count <span class="field-optional">(optional)</span></label>
+                <input type="number" id="guests-exact" name="guests_exact" min="1" placeholder="e.g. 75">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Drinks You're Interested In <span class="field-optional">(select all that apply)</span></label>
+              <div class="drinks-checklist">
+                <div class="drinks-category">
+                  <span class="drinks-category-label">Espresso Drinks</span>
+                  <div class="drinks-check-grid">
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Espresso"> Espresso</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Americano"> Americano</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Cappuccino"> Cappuccino</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Latte"> Latte</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Cortado"> Cortado</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Macchiato"> Macchiato</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Mocha"> Mocha</label>
+                  </div>
+                </div>
+                <div class="drinks-category">
+                  <span class="drinks-category-label">Coffee &amp; Cold</span>
+                  <div class="drinks-check-grid">
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Pour Over"> Pour Over</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Cold Brew"> Cold Brew</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Iced Coffee"> Iced Coffee</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Iced Latte"> Iced Latte</label>
+                  </div>
+                </div>
+                <div class="drinks-category">
+                  <span class="drinks-category-label">Matcha &amp; Specialty</span>
+                  <div class="drinks-check-grid">
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Matcha Latte"> Matcha Latte</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Dirty Matcha"> Dirty Matcha</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Karak Chai"> Karak Chai</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Kashmiri Chai"> Kashmiri Chai</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Hot Chocolate"> Hot Chocolate</label>
+                  </div>
+                </div>
+                <div class="drinks-category">
+                  <span class="drinks-category-label">Refreshers</span>
+                  <div class="drinks-check-grid">
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Strawberry Mint Spritz"> Strawberry Mint Spritz</label>
+                    <label class="check-option"><input type="checkbox" name="drinks" value="Mango Dragonfruit"> Mango Dragonfruit</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Contact Method <span class="field-optional">(optional)</span></label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="preferred_contact" value="Email"> Email</label>
+                <label class="radio-option"><input type="radio" name="preferred_contact" value="Phone"> Phone</label>
               </div>
             </div>
 

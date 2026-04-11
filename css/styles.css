@@ -466,7 +466,7 @@ section h2 {
   gap: 2rem;
   max-width: 1040px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;
 }
 
 .package-card {
@@ -474,6 +474,8 @@ section h2 {
   border-radius: var(--border-radius);
   padding: 2.25rem 1.75rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
   box-shadow: var(--shadow);
   position: relative;
   border: 2px solid transparent;
@@ -519,7 +521,7 @@ section h2 {
   font-family: 'Playfair Display', serif;
 }
 
-.package-card ul { list-style: none; padding: 0; margin: 0 0 1.75rem; }
+.package-card ul { list-style: none; padding: 0; margin: 0 0 1.75rem; flex: 1; }
 
 .package-card ul li {
   position: relative;

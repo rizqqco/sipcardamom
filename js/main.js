@@ -21,7 +21,7 @@
 
   const navHTML = `
     <nav class="navbar">
-      <a href="${base}index.html" class="logo"><img src="${base}assets/images/logo.png" alt="Cardamom – A Mobile Espresso Cart" class="logo-img"></a>
+      <a href="${base}index.html" class="logo">cardamom.</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>

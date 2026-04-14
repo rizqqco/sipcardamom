@@ -3,6 +3,8 @@
  * Stylesheet
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
 /* ===================== VARIABLES ===================== */
 :root {
   --primary-color: #215732;
@@ -55,15 +57,12 @@ img { max-width: 100%; display: block; }
 }
 
 .logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--primary-color);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  height: 44px;
-  width: auto;
-  display: block;
+  letter-spacing: 0;
 }
 
 .nav-links {
@@ -136,7 +135,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   text-align: center;
   padding: 6rem 1.5rem 5rem;
-  background: var(--accent-color);
+  background: #ebe6d4;
   position: relative;
   overflow: hidden;
 }
@@ -165,8 +164,8 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-logo {
-  width: 260px;
-  max-width: 80vw;
+  width: 380px;
+  max-width: 85vw;
   height: auto;
   display: block;
   margin: 0 auto 0.5rem;

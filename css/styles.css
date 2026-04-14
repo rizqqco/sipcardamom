@@ -7,7 +7,7 @@
 :root {
   --primary-color: #215732;
   --primary-dark:  #174422;
-  --secondary-color: #faece3;
+  --secondary-color: #fbf3e7;
   --accent-color:    #fbf3e7;
   --gold:            #c9a96e;
   --text-color:  #2b2b2b;
@@ -227,7 +227,7 @@ img { max-width: 100%; display: block; }
 /* ===================== PAGE BANNER (subpages) ===================== */
 .page-banner {
   padding: 4.5rem 1.5rem 3.5rem;
-  background: radial-gradient(ellipse at 25% 30%, #f9e8dc 0%, #f0d9c4 60%, #e8cdb4 100%);
+  background: var(--accent-color);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -795,7 +795,7 @@ section h2 {
 .about-story-text p:last-child { margin-bottom: 0; }
 
 .about-visual {
-  background: radial-gradient(ellipse at center, #f0d9c4, #e8cdb4);
+  background: var(--accent-color);
   border-radius: var(--border-radius);
   aspect-ratio: 4/5;
   display: flex;
@@ -918,7 +918,7 @@ section h2 {
 }
 
 .event-detail-visual {
-  background: radial-gradient(ellipse at center, #f0d9c4, #e8cdb4);
+  background: var(--accent-color);
   border-radius: var(--border-radius);
   aspect-ratio: 4/3;
   overflow: hidden;

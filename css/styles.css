@@ -55,12 +55,15 @@ img { max-width: 100%; display: block; }
 }
 
 .logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--primary-color);
   text-decoration: none;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -161,23 +164,12 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.25rem;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  margin: 0;
-  color: var(--primary-color);
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-.hero h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  margin-top: 0.6rem;
-  letter-spacing: 4px;
-  color: var(--primary-color);
-  opacity: 0.65;
-  text-transform: uppercase;
+.hero-logo {
+  width: 260px;
+  max-width: 80vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
 }
 
 .hero p {

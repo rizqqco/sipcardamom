@@ -133,7 +133,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   text-align: center;
   padding: 6rem 1.5rem 5rem;
-  background: radial-gradient(ellipse at 25% 30%, #f9e8dc 0%, #f0d9c4 60%, #e8cdb4 100%);
+  background: var(--accent-color);
   position: relative;
   overflow: hidden;
 }

@@ -1053,7 +1053,7 @@ section h2 {
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 
-.form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
 
 .form-group label {
   font-size: 0.78rem;
@@ -1404,6 +1404,7 @@ section h2 {
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
   .submit-btn { width: 100%; }
+  .booking-form-wrap { padding: 1.25rem; }
 
   .packages-grid {
     grid-template-columns: 1fr;

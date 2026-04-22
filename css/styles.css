@@ -1076,6 +1076,8 @@ section h2 {
   transition: border-color 0.2s ease;
   outline: none;
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .form-group input:focus,
@@ -1404,7 +1406,7 @@ section h2 {
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
   .submit-btn { width: 100%; }
-  .booking-form-wrap { padding: 1.25rem; }
+  .booking-form-wrap { padding: 1.25rem; overflow-x: hidden; }
 
   .packages-grid {
     grid-template-columns: 1fr;

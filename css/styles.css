@@ -355,8 +355,8 @@ section h2 {
 }
 
 .flavor-img-wrap {
-  width: 200px;
-  height: 265px;
+  width: 280px;
+  height: 370px;
   overflow: hidden;
   border-radius: var(--border-radius);
   background-color: var(--accent-color);

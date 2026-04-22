@@ -74,6 +74,7 @@
             class="inquiry-form"
           >
             <input type="hidden" name="_next" id="form-next">
+            <input type="hidden" name="Submitted At" id="form-submitted-at">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Your Name *</label>
@@ -263,6 +264,15 @@
       }
 
       function submitViaFetch() {
+        var tsField = document.getElementById('form-submitted-at');
+        if (tsField) {
+          tsField.value = new Date().toLocaleString('en-US', {
+            timeZone: 'America/New_York',
+            dateStyle: 'full',
+            timeStyle: 'short'
+          });
+        }
+
         var btn = form.querySelector('.submit-btn');
         btn.disabled = true;
         btn.textContent = 'Sending…';

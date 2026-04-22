@@ -1090,7 +1090,8 @@ section h2 {
 .form-group input[type="time"] {
   -webkit-appearance: none;
   appearance: none;
-  line-height: normal;
+  line-height: 1.5;
+  min-height: 2.8rem;
 }
 
 .form-group.field-error input,

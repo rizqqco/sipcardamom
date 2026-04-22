@@ -364,10 +364,18 @@ section h2 {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  z-index: 1;
 }
 
-.flavor-img-wrap:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+@media (hover: hover) {
+  .flavor-img-wrap:hover {
+    transform: scale(1.18);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+  }
+}
 
 .flavor-img { width: 100%; height: 100%; object-fit: cover; image-rendering: high-quality; }
 

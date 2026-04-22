@@ -371,7 +371,7 @@ section h2 {
 
 @media (hover: hover) {
   .flavor-img-wrap:hover {
-    transform: scale(2);
+    transform: scale(1.5);
     box-shadow: var(--shadow-md);
     z-index: 10;
   }

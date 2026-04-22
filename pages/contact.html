@@ -269,7 +269,7 @@
 
         fetch('https://formspree.io/f/xnjokavl', {
           method: 'POST',
-          body: new FormData(form),
+          body: (function () { var d = new FormData(form); d.delete('_next'); return d; }()),
           headers: { Accept: 'application/json' }
         }).then(function (res) {
           if (res.ok) {

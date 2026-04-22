@@ -1086,6 +1086,13 @@ section h2 {
 
 .form-group textarea { resize: vertical; min-height: 115px; }
 
+.form-group input[type="date"],
+.form-group input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: normal;
+}
+
 .form-group.field-error input,
 .form-group.field-error select,
 .form-group.field-error textarea { border-color: #d93025; background-color: #fff8f8; }

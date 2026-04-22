@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You – Cardamom Mobile Espresso Cart</title>
+  <meta name="description" content="Your booking inquiry has been received. We'll be in touch within 24 hours.">
+
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .thankyou-section {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 2rem;
+      background-color: var(--white);
+      text-align: center;
+    }
+    .thankyou-card {
+      background-color: var(--accent-color);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 3.5rem 3rem;
+      max-width: 560px;
+      width: 100%;
+    }
+    .thankyou-icon {
+      width: 64px;
+      height: 64px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.75rem;
+    }
+    .thankyou-icon svg { color: white; }
+    .thankyou-card h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin: 0 0 1rem;
+    }
+    .thankyou-card p {
+      font-size: 1rem;
+      color: var(--muted-text);
+      line-height: 1.7;
+      margin: 0 0 0.6rem;
+    }
+    .thankyou-card p strong { color: var(--text-color); }
+    .thankyou-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.25rem;
+      flex-wrap: wrap;
+    }
+    .thankyou-actions a {
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 7px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+    .btn-primary:hover { background-color: var(--primary-dark); }
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 1.5px solid var(--primary-color);
+    }
+    .btn-secondary:hover { background-color: var(--primary-color); color: var(--white); }
+    @media (max-width: 640px) {
+      .thankyou-card { padding: 2.5rem 1.5rem; }
+      .thankyou-card h1 { font-size: 1.65rem; }
+      .thankyou-actions { flex-direction: column; align-items: center; }
+      .thankyou-actions a { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="thankyou-section">
+      <div class="thankyou-card">
+        <div class="thankyou-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h1>You're all set!</h1>
+        <p>Your inquiry has been received — <strong>we'll be in touch within 24 hours</strong> with a personalized quote.</p>
+        <p>In the meantime, feel free to browse our menu or follow us on Instagram for a taste of what's coming to your event.</p>
+        <div class="thankyou-actions">
+          <a href="menu.html" class="btn-primary">View Our Menu</a>
+          <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

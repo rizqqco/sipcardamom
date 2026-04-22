@@ -235,5 +235,65 @@
 
   <div id="site-footer"></div>
   <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      const form = document.querySelector('.inquiry-form');
+      if (!form) return;
+
+      function validate() {
+        let firstError = null;
+        form.querySelectorAll('[required]').forEach(function (field) {
+          const group = field.closest('.form-group');
+          if (!field.value.trim()) {
+            group.classList.add('field-error');
+            if (!firstError) firstError = group;
+          } else {
+            group.classList.remove('field-error');
+          }
+        });
+        return firstError;
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const firstError = validate();
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        const btn = form.querySelector('.submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          });
+          if (res.ok) {
+            window.location.href = 'thank-you.html';
+          } else {
+            throw new Error();
+          }
+        } catch (_) {
+          btn.disabled = false;
+          btn.innerHTML = 'Send Inquiry &rarr;';
+          alert('Something went wrong — please try again or email us at sipcardamom@gmail.com.');
+        }
+      });
+
+      form.addEventListener('input', function (e) {
+        const group = e.target.closest('.form-group');
+        if (group) group.classList.remove('field-error');
+      });
+
+      form.addEventListener('change', function (e) {
+        const group = e.target.closest('.form-group');
+        if (group) group.classList.remove('field-error');
+      });
+    })();
+  </script>
 </body>
 </html>

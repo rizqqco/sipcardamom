@@ -1086,6 +1086,11 @@ section h2 {
 
 .form-group textarea { resize: vertical; min-height: 115px; }
 
+.form-group.field-error input,
+.form-group.field-error select,
+.form-group.field-error textarea { border-color: #d93025; background-color: #fff8f8; }
+.form-group.field-error label { color: #d93025; }
+
 .submit-btn {
   background-color: var(--primary-color);
   color: var(--white);

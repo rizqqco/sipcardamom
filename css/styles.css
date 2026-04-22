@@ -1403,6 +1403,7 @@ section h2 {
 
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
+  .submit-btn { width: 100%; }
 
   .packages-grid {
     grid-template-columns: 1fr;

@@ -73,6 +73,7 @@
             method="POST"
             class="inquiry-form"
           >
+            <input type="hidden" name="_next" id="form-next">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Your Name *</label>
@@ -237,13 +238,20 @@
   <script src="../js/main.js"></script>
   <script>
     (function () {
-      const form = document.querySelector('.inquiry-form');
+      var form = document.querySelector('.inquiry-form');
       if (!form) return;
 
+      // Set _next to the absolute URL of our thank-you page so native submit
+      // also redirects correctly if the fetch path ever fails.
+      var nextInput = document.getElementById('form-next');
+      if (nextInput) {
+        nextInput.value = new URL('thank-you.html', window.location.href).href;
+      }
+
       function validate() {
-        let firstError = null;
+        var firstError = null;
         form.querySelectorAll('[required]').forEach(function (field) {
-          const group = field.closest('.form-group');
+          var group = field.closest('.form-group');
           if (!field.value.trim()) {
             group.classList.add('field-error');
             if (!firstError) firstError = group;
@@ -254,43 +262,45 @@
         return firstError;
       }
 
-      form.addEventListener('submit', async function (e) {
+      function submitViaFetch() {
+        var btn = form.querySelector('.submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        fetch('https://formspree.io/f/xnjokavl', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            window.location.href = 'thank-you.html';
+          } else {
+            throw new Error('not ok');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          btn.innerHTML = 'Send Inquiry &rarr;';
+          alert('Something went wrong — please try again or email us at sipcardamom@gmail.com.');
+        });
+      }
+
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
-        const firstError = validate();
+        var firstError = validate();
         if (firstError) {
           firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
           return;
         }
-
-        const btn = form.querySelector('.submit-btn');
-        btn.disabled = true;
-        btn.textContent = 'Sending…';
-
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { Accept: 'application/json' }
-          });
-          if (res.ok) {
-            window.location.href = 'thank-you.html';
-          } else {
-            throw new Error();
-          }
-        } catch (_) {
-          btn.disabled = false;
-          btn.innerHTML = 'Send Inquiry &rarr;';
-          alert('Something went wrong — please try again or email us at sipcardamom@gmail.com.');
-        }
+        submitViaFetch();
       });
 
       form.addEventListener('input', function (e) {
-        const group = e.target.closest('.form-group');
+        var group = e.target.closest('.form-group');
         if (group) group.classList.remove('field-error');
       });
 
       form.addEventListener('change', function (e) {
-        const group = e.target.closest('.form-group');
+        var group = e.target.closest('.form-group');
         if (group) group.classList.remove('field-error');
       });
     })();

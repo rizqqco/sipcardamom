@@ -355,8 +355,8 @@ section h2 {
 }
 
 .flavor-img-wrap {
-  width: 120px;
-  height: 165px;
+  width: 200px;
+  height: 265px;
   overflow: hidden;
   border-radius: var(--border-radius);
   background-color: var(--accent-color);
@@ -1427,7 +1427,7 @@ section h2 {
   .form-row { grid-template-columns: 1fr; }
 
   .flavors-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .flavor-img-wrap { width: 100px; height: 135px; }
+  .flavor-img-wrap { width: 150px; height: 200px; }
 
   .submit-btn { width: 100%; }
   .drinks-check-grid { grid-template-columns: repeat(2, 1fr); }

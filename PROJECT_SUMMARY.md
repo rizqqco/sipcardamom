@@ -38,7 +38,7 @@ Plain HTML/CSS/JS, no framework, no build step or package manager.
 - Submitted via `fetch()` (AJAX/JSON) with a JS handler in `contact.html`; `_next` field stripped from the AJAX payload so Formspree returns JSON instead of doing a redirect (this was a fixed bug — see history below).
 - On success, JS redirects to `pages/thank-you.html` (which has `noindex` so it doesn't get indexed by search engines).
 - Includes a hidden field capturing submission time in America/New_York timezone for accurate email timestamps.
-- Required fields: name, email, event date, expected guests (range: Up to 50, 50–75, 75–100, 100–150, 150–200, 200+), event location. Optional: phone, event time, event type, exact guest count, drink checkboxes, preferred contact method, message.
+- Required fields: name, email, event date, expected guests (range: Up to 40, 41–75, 75–100, 100–150, 150–200, 200+), event location. Optional: phone, event time, event type, exact guest count, drink checkboxes, preferred contact method, message.
 - Client-side validation highlights empty required fields and scrolls to the first error.
 
 ## Business content
@@ -95,7 +95,7 @@ Roughly chronological arc:
 4. **May 2026 — package refinements**: made phone/email clickable links on contact page; tightened package details — Espresso Hour capped at 40 guests, Celebration duration changed 4+→3+ hrs, Gathering duration changed 3→2.5 hrs then to a 2–2.5 hr range with 50–100 guests, "professional barista" wording replaced with "2 baristas", matcha mentions removed from Gathering package copy (both index and events pages) since matcha isn't part of that package's included flavors.
 5. **October 2026 — price increase** (2026-10-12): Espresso Hour raised $600 → $750 and The Gathering raised $800 → $900, on both `index.html` and `pages/events.html`.
 6. **November 2026 — barista wording** (2026-11-11): packages intro on home and events pages changed from "a professional barista" to "professional baristas" to match the "2 baristas" package cards; menu page closing line updated the same way.
-7. **November 2026 — guest ranges** (2026-11-11): contact form "Expected Guests" option 50–100 split into 50–75 and 75–100. Then reworked to: Up to 50, 50–75, 75–100, 100–150, 150–200, 200+ (Under 25 and 25–50 merged; 100–200 split).
+7. **November 2026 — guest ranges** (2026-11-11): contact form "Expected Guests" option 50–100 split into 50–75 and 75–100. Then reworked to: Up to 50, 50–75, 75–100, 100–150, 150–200, 200+ (Under 25 and 25–50 merged; 100–200 split). Then first two changed to Up to 40 and 41–75.
 
 **Current state (as of last commit, 2026-11-11):** site is live on Vercel, fully responsive, form-integrated via Formspree, SEO-tagged, and analytics-tracked. No open/in-progress work is evident from the repo itself — check with Faisal for what's next.
 
